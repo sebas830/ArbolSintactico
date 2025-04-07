@@ -2,7 +2,7 @@ from lark import Lark
 from lark.tree import pydot__tree_to_png
 import os
 
-# Gramática mejorada con soporte para números decimales
+# Gramática 
 grammar = r"""
     start: expr                -> start
     expr: expr "+" term        -> add
@@ -25,23 +25,23 @@ grammar = r"""
 parser = Lark(grammar, start='start', parser='lalr')
 
 def main():
-    # Pedir al usuario la expresión
+    # solicitar exprecion
     input_expr = input("Escribe una expresión aritmética: ")
 
     try:
-        # Parsear la expresión
+        # Parsear la expresion
         tree = parser.parse(input_expr)
 
-        # Mostrar árbol en consola
+        # Mostrar arbol en consola
         print("\nÁrbol sintáctico:")
         print(tree.pretty())
 
-        # Generar gráfico
+        # Generar grafico
         output_file = "arbol_sintactico.png"
         pydot__tree_to_png(tree, output_file)
         print(f"\nImagen generada: {output_file}")
 
-        # Abrir imagen automáticamente (Windows)
+        # Abrir imagen automáticamente 
         os.startfile(output_file)
 
     except Exception as e:
