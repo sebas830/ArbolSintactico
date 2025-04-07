@@ -1,7 +1,6 @@
 from lark import Lark
 from lark.tree import pydot__tree_to_png
 import os
-
 # Gramática 
 grammar = r"""
     start: expr                -> start
@@ -50,4 +49,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
