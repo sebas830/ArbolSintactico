@@ -1,3 +1,7 @@
+
+# este puno NO ES PARTE DEL TALLER mas sin embargo lo hicimos con pequeñas ayudas de youtube + ia
+# para validar la gramatica libre mediante codigo
+
 import sys
 sys.dont_write_bytecode = True  # Evita que se cree la carpeta __pycache__
 

@@ -1,7 +1,8 @@
 from lark import Lark
 from lark.tree import pydot__tree_to_png
 import os
-# Gramática 
+
+# Definimos la gramatica
 grammar = r"""
     start: expr                -> start
     expr: expr "+" term        -> add
@@ -47,5 +48,6 @@ def main():
         print("\nError al analizar la expresión:")
         print(e)
 
+# Ejecutar la funcion principal solo si este archivo se ejecuta directamente
 if __name__ == "__main__":
     main()
